@@ -22,7 +22,7 @@ export const Nav = () => {
             type="text"
             placeholder="Поиск на Zood"
             style={{
-              padding: "15px 400px 20px 10px",
+              padding: "15px 565px 20px 10px",
               background: "#f1f1f1",
               border: "0px",
               borderRadius: "10px",
@@ -33,7 +33,7 @@ export const Nav = () => {
             sx={{
               padding: "17px 5px",
               position: "absolute",
-              left: "560px",
+              left: "723px",
               borderRadius: "10px",
               fontSize: "20px",
             }}
@@ -46,7 +46,7 @@ export const Nav = () => {
         </Box>
         <Box
           sx={[
-            { mt: "10px", ml: "180px", color: "#2D3092FF" },
+            { mt: "10px", ml: "20px", color: "#2D3092FF" },
             { "&&:hover": { mt: "7px", transition: ".2s linear" } },
           ]}
         >
