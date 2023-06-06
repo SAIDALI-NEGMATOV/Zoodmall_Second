@@ -11,10 +11,13 @@ import { base_url } from "./Api/base_url";
 
 function App() {
   let [dataAfish, setdataAfish] = useState([]);
+  let [dataProduct,setdataProduct]=useState([])
 
   useEffect(() => {
     axios.get(base_url + "Afish ")
     .then((res) => setdataAfish(res.data));
+    axios.get(base_url + "product ")
+    .then((res) => setdataProduct(res.data));
   },[]);
 
 
@@ -24,7 +27,7 @@ function App() {
       <Nav />
       <Katigoriy />
       <Routes>
-        <Route path="/" element={<Components dataAfish={dataAfish} />} />
+        <Route path="/" element={<Components dataAfish={dataAfish} dataProduct={dataProduct} />} />
       </Routes>
     </Box>
   );

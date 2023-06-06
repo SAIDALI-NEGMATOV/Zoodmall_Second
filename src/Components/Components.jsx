@@ -1,12 +1,17 @@
 import React from 'react'
 import { Box } from '@mui/material'
-import { Swiper } from './Swiper/Swiper'
+import { Sviper } from './Swiper/Sviper'
+import { Menyu } from './Menyu/Menyu'
+import { Product } from './Product/Product'
 
 
-export const Components = ({dataAfish}) => {
+
+export const Components = ({dataAfish,dataProduct}) => {
   return (
     <Box>
-      <Swiper dataAfish={dataAfish}/>
+      <Sviper dataAfish={dataAfish}/>
+      <Menyu/>
+      <Product dataProduct={dataProduct}/>
     </Box>
   )
 }
