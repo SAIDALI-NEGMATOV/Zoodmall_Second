@@ -1,7 +1,13 @@
 import { Box, Typography } from "@mui/material";
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 export const Product = ({ dataProduct }) => {
+  let navigate = useNavigate();
+
+  let itemPro = (item) => {
+    navigate("/components/" + item.Id);
+  };
   return (
     <Box
       display={"flex"}
@@ -45,6 +51,7 @@ export const Product = ({ dataProduct }) => {
           {dataProduct.map((item, index) => (
             <Box>
               <Box
+                onClick={() => itemPro(item)}
                 key={index}
                 sx={[
                   {
